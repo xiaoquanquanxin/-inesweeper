@@ -39,6 +39,8 @@ window.onload = function () {
 			});
 		}
 		Core.boomList = option.boomList;
+		Core.cellList = [];
+		Core.cellPositionData= [];
 	}
 
 	function createCell(option) {
@@ -90,6 +92,10 @@ window.onload = function () {
 				return false;
 			}
 			loopLogic(core);
+			console.log(Core.initData.safeNum);
+			console.log(Core.cellList.reduce(function (prev, next) {
+				return prev + (next.isCleared ? 1 : 0);
+			}, 0));
 			//  是否点光了
 			if (Core.initData.safeNum === Core.cellList.reduce(function (prev, next) {
 					return prev + (next.isCleared ? 1 : 0);
@@ -147,7 +153,7 @@ window.onload = function () {
 				safeNum: 0,
 			};
 			init(Core.initData);
-			warp.style.width = _cols * document.querySelector('.cell').offsetWidth + 130 + 'px';
+			warp.style.width = Math.max(_cols * document.querySelector('.cell').offsetWidth + 130, 450) + 'px';
 		});
 		//  右键
 		compatibility.eventListener(document, 'contextmenu', function (e) {
