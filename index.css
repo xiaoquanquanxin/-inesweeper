@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.float-right {
+    float: right;
+}
+.float-left {
+    float: left;
+}
+.clear::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+#warp {
+    margin: auto;
+}
+.btn-group button {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 2px solid skyblue;
+    background-color: whitesmoke;
+}
+button.current-btn {
+    border: 2px solid crimson;
+}
+.info-details span {
+    color: red;
+}
+#main {
+    margin-top: 10px;
+    float: left;
+    border: 2px solid rosybrown;
+}
+#main ul::after {
+    clear: both;
+    display: block;
+    content: '';
+}
+#main li {
+    list-style: none;
+    cursor: pointer;
+    float: left;
+}
+#main li::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+.cell {
+    border: 1px solid skyblue;
+    text-align: center;
+    background-color: #e5ecff;
+}
+.cell.normal {
+    background-color: white;
+}
+.cell:hover {
+    background-color: lightyellow;
+    border: 1px solid crimson;
+}
+.cell.isBoom {
+    background-color: lightgreen;
+}
+.cell.pass {
+    color: white;
+    background-color: crimson;
+}
+.easy {
+    width: 450px;
+}
+.normal {
+    width: 600px;
+}
+.hard {
+    width: 900px;
+}
+.crazy {
+    width: 1180px;
+}
+.easy .cell, .normal .cell {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+}
+.hard .cell, .crazy .cell {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+}

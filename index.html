@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>扫雷</title>
+    <link rel="stylesheet" href="./index.css?v=001">
+</head>
+<body>
+<div id="warp" class="clear easy">
+    <div class="btn-group">
+        <button id="newGame">重新开始本局</button>
+        <button id="reset">作弊</button>
+        <div class="float-right">
+            <button id="easy">初级</button>
+            <button id="normal">中级</button>
+            <button id="hard">高级</button>
+            <button id="crazy">地狱</button>
+            <button id="custom">自定义</button>
+        </div>
+    </div>
+    <div class="info-details float-right">
+        <p><span id="rows"></span>行</p>
+        <p><span id="cols"></span>列</p>
+        <p>一共<span id="total"></span>颗雷</p>
+        <p>剩余<span id="residue"></span>颗雷</p>
+    </div>
+    <div id="main">
+    </div>
+</div>
+
+<script src="./loadJs.js"></script>
+<script>
+	loadJs('./common.js');
+	loadJs('./core.js');
+	loadJs('./index.js');
+</script>
+</body>
+</html>
